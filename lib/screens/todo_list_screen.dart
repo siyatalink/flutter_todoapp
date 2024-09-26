@@ -25,7 +25,7 @@ class _TodoListScreenState extends State<TodoListScreen> {
   void _fetchTodos() async {
     try {
       final response = await http.get(
-        Uri.parse('https://7760-122-160-152-83.ngrok-free.app/todos'),
+        Uri.parse('https://flutter-todoapp.onrender.com/todos'),
         headers: {'Authorization': widget.token},
       );
 
@@ -47,7 +47,7 @@ class _TodoListScreenState extends State<TodoListScreen> {
 
     try {
       final response = await http.post(
-        Uri.parse('https://7760-122-160-152-83.ngrok-free.app/todos'),
+        Uri.parse('https://flutter-todoapp.onrender.com/todos'),
         headers: {
           'Content-Type': 'application/json',
           'Authorization': widget.token,
@@ -69,7 +69,7 @@ class _TodoListScreenState extends State<TodoListScreen> {
   void _deleteTodo(String id) async {
     try {
       final response = await http.delete(
-        Uri.parse('https://7760-122-160-152-83.ngrok-free.app/todos/$id'),
+        Uri.parse('https://flutter-todoapp.onrender.com/todos/$id'),
         headers: {'Authorization': widget.token},
       );
 

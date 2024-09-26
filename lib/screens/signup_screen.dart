@@ -14,7 +14,7 @@ class _SignupScreenState extends State<SignupScreen> {
   void _signup() async {
     final response = await http.post(
       Uri.parse(
-          'https://7760-122-160-152-83.ngrok-free.app/auth/signup'), // Ensure ngrok is running
+          'https://flutter-todoapp.onrender.com/auth/signup'), // Ensure ngrok is running
       headers: {'Content-Type': 'application/json'},
       body: json.encode({
         'username': _usernameController.text,
